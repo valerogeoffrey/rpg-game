@@ -1,0 +1,147 @@
+AllCops:
+  RubyInterpreters:
+    - ruby
+  Include:
+    - '**/*.rb'
+    - '**/*.axlsx'
+    - '**/*.rake'
+    - '**/*.ru'
+  Exclude:
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'perso/**/*'
+    - '.git/**/*'
+    - 'bin/**/*'
+    - 'lib/scripts/**/*'
+    - 'bin/{rails,rake,update,setup}'
+
+  DefaultFormatter: progress
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  NewCops: enable
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake
+  - rubocop-thread_safety
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Metrics/MethodLength:
+  Max: 1000
+
+Metrics/ModuleLength:
+  Max: 1000
+
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent
+
+Layout/IndentationStyle:
+  EnforcedStyle: spaces
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ArrayAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: indent
+
+Layout/DefEndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Layout/BeginEndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+Layout/MultilineAssignmentLayout:
+  EnforcedStyle: same_line
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Lint/Debugger:
+  DebuggerMethods:
+    Kernel:
+      - binding.irb
+    Pry:
+      - binding.pry
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+  
+Metrics/BlockLength:
+  Enabled: true
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 1000
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/IndexedLet:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false 
+
+Layout/LineLength:
+  Max: 140
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+RSpec/FilePath:
+  Exclude:
+    - 'spec/vendor/rooms/builder_spec.rb'
+
+Style/MethodCallWithArgsParentheses:
+  AllowParenthesesInMultilineCall: true
+  AllowParenthesesInChaining: true
+  AllowParenthesesInCamelCaseMethod: true
+  AllowParenthesesInStringInterpolation: true
+
+Style/Copyright:
+  Enabled: false
+
+Style/ClassVars:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: no_comma

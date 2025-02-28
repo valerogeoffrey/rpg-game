@@ -1,0 +1,127 @@
+rooms:
+  - id: gryffondor
+    name: "Maison Gryffondor"
+    description: "Description maison gryffondor"
+    first_room: true
+    last_room: false
+    moves:
+      forward: poufsouffle
+      right: agrid
+  - id: poufsouffle
+    name: "Maison pouffsouffle"
+    description: "Description maison pouffsouffle"
+    first_room: false
+    last_room: false
+    moves:
+      forward: serpentard
+  - id: serpentard
+    name: "Maison serpentard"
+    description: "Description maison serpentard"
+    first_room: false
+    last_room: false
+    moves:
+      forward: final
+  - id: final
+    name: "Final"
+    description: "Description maison Final"
+    first_room: false
+    last_room: true
+    moves:
+      back: serpentard
+  - id: agrid
+    name: "Agrid"
+    description: "Description maison Agrid"
+    first_room: false
+    last_room: false
+    moves:
+      left: poufsouffle
+      back: gryffondor
+
+enigmas:
+  - question: "> How much is: 1 + 1 ?"
+    answer: 2
+    type: choice
+    choices:
+      - 1
+      - 2
+      - 6
+      - 3
+  - question: "> How much is: 4 + 1 ?"
+    answer: 5
+    type: free
+  - question: "> How much is: 2 + 2 ?"
+    answer: 4
+    type: choice
+    choices:
+      - 2
+      - 4
+      - 6
+      - 8
+  - question: "> How much is: 4 + 2 ?"
+    answer: 6
+    type: choice
+    choices:
+      - 2
+      - 4
+      - 6
+      - 8
+  - question: "> How much is: 4 x 2 ?"
+    answer: 8
+    type: choice
+    choices:
+      - 2
+      - 4
+      - 6
+      - 8
+
+characters:
+  Bellatrix:
+    points: 70
+    attacks:
+      Confringo: 60
+      bomba: 40
+      doloris: 50
+      Glacius: 50
+  Voldemort:
+    points: 50
+    attacks:
+      avada kedavra: 90
+      imperium: 60
+      doloris: 80
+      Draconifors: 80
+  Rogue:
+    points: 80
+    attacks:
+      Legilimens: 50
+      Incarcerem: 60
+      Flipendo: 60
+      Sectumsempra: 100
+  Dumbledore:
+    points: 120
+    attacks:
+      avada kedavra: 70
+      expeliarmus: 65
+      Destructum: 80
+      Flipendo: 58
+  Harry:
+    points: 120
+    attacks:
+      avada kedavra: 90
+      expeliarmus: 65
+      Destructum: 80
+      Flipendo: 58
+
+hero:
+  name: Buzz
+  points: 100
+  attacks:
+    expeliarmus: 65
+    Destructum: 80
+    Flipendo: 58
+
+game:
+  difficulty: 1
+  with_enigmas: false
+  with_fights: false
+  fight_mode: pvp
+  cheat_mode: false
