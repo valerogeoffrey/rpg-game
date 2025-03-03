@@ -16,8 +16,8 @@ This is a turn-based RPG game running in the command line, built in Ruby. Player
 
 Clone the repository and install dependencies:
 ```
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/valerogeoffrey/rpg-game.git
+cd rpg-game
 bundle install
 ```
 
@@ -26,7 +26,7 @@ bundle install
 Start the game with the following command:
 
 ```
-ruby main.rb
+ruby app.rb
 ```
 
 ## Running Tests
@@ -40,7 +40,7 @@ bundle exec rspec spec/vendor
 To run a specific test file:
 
 ```
-bundle exec rspec spec/path/to/file_spec.rb
+bundle exec rspec spec/vendor/../file_spec.rb
 ```
 
 ## Code Quality Checks
